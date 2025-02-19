@@ -243,8 +243,11 @@ a {
 
         /* Content to blur */
         .content {
+		display: flex;
+		flex-direction: column; 
             transition: filter 0.3s ease;
             padding: 2rem;
+			
         }
 
         .blurred {
@@ -326,7 +329,7 @@ a {
 @media (max-width: 600px) {
 .open-btn {
 
-	display: flex;
+display: flex;
     justify-content: center;
     align-items: center;
     background: #00000000;
@@ -337,7 +340,7 @@ a {
     cursor: pointer;
     color: white;
 	
-	width: 210px;  
+width: 210px;  
     height: auto;
 	
 }
