@@ -315,15 +315,11 @@ a {
     transition: transform 0.2s;
 }
 
-.team-graphic-button:hover {
-    transform: scale(1.05);
-}
-
 
 @media (max-width: 600px) {
     .open-btn {
         flex-direction: column;
-        width: 100%;
+        width: 200px;
     }
 }
 
