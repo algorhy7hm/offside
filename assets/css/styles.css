@@ -299,27 +299,49 @@ a {
 
 
 .open-btn {
-    display: flex;
+
+	display: flex;
     justify-content: center;
     align-items: center;
     background: #00000000;
     border: none;
-    border-radius: 20px;
     padding: 20px;
     margin: 20px auto;
-    width: 600px;
-    max-width: 100%;
     position: relative;
     cursor: pointer;
     color: white;
-    transition: transform 0.2s;
+	
+	width: 600px;  
+    height: auto;
+	
 }
 
+.open-btn_img {
+    width: 100%;  
+	height:auto;
+    object-fit: cover;
+
+	
+}
 
 @media (max-width: 600px) {
-    .open-btn {
-        width: 200px;
-    }
+.open-btn {
+
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00000000;
+    border: none;
+    padding: 20px;
+    margin: 20px auto;
+    position: relative;
+    cursor: pointer;
+    color: white;
+	
+	width: 240px;  
+    height: auto;
+	
+}
 }
 
 
