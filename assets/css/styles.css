@@ -299,7 +299,6 @@ a {
 
 
 .open-btn {
-
 	display: flex;
     justify-content: center;
     align-items: center;
@@ -338,7 +337,7 @@ a {
     cursor: pointer;
     color: white;
 	
-	width: 240px;  
+	width: 210px;  
     height: auto;
 	
 }
