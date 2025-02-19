@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offside</title>
+  
+  <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- icons-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+        <!--CSS -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+<body>
+
+<header class="header">
+    <img src="C:\Users\91997\Downloads\Offside\assets\img\logo.jpg" class="logo">
+    <div class="instagram-icon">
+        <a href="https://www.instagram.com/offsidebpgc" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+	
+	<div class="title">
+	Offside
+	</div>
+	
+</header>
+
+<div class="content" id="pageContent">
+
+	<div class="Heading"> Upcoming Fixtures </div>
+
+     <button class="open-btn" onclick="openPopup()">
+		<img src="C:\Users\91997\Downloads\Offside\assets\img\first_match.png">
+     </button>
+	 
+	 <button class="open-btn" onclick="openPopup()">
+		<img src="C:\Users\91997\Downloads\Offside\assets\img\second_match.png">
+     </button>
+</div>
+
+<!-- Modal Popup -->
+<div class="modal" id="playerModal">
+    <div class="modal-box">
+        <div class="close-btn" onclick="closePopup()">×</div>
+        <h2>Team Players</h2>
+        <ul class="player-list">
+            <li>Player 1</li>
+            <li>Player 2</li>
+            <li>Player 3</li>
+            <li>Player 4</li>
+            <li>Player 5</li>
+        </ul>
+    </div>
+</div>
+  
+
+<nav class="nav">
+
+            <ul class="nav__list">
+                <a href="index.html" class="nav__link">
+                   <i class="ri-file-list-3-line"></i>
+                    <span class="nav__name">
+                        Announcements
+                    </span>
+                </a>
+
+                <a href="fixtures.html" class="nav__link active-link">
+                    <i class="ri-calendar-2-fill"></i>
+                    <span class="nav__name">
+                        Fixtures
+                    </span>
+                </a>
+
+                <a href="stats.html" class="nav__link">
+                    <i class="ri-bar-chart-2-fill"></i>
+                    <span class="nav__name">
+                        Stats
+                    </span>
+                </a>
+
+                <!--<img src="C:\Users\91997\Downloads\Offside\assets\img\ball.png" class="indicator" width="15" height="15" >
+				</img> --!>
+            </ul>
+        </nav>
+
+</div>
+
+<script>
+    const modal = document.getElementById('playerModal');
+    const content = document.getElementById('pageContent');
+
+    function openPopup() {
+        modal.classList.add('active');
+        content.classList.add('blurred');
+    }
+
+    function closePopup() {
+        modal.classList.remove('active');
+        content.classList.remove('blurred');
+    }
+
+    // Close the popup if you click outside the modal box
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closePopup();
+        }
+    });
+</script>
+
+
+		
+		<script src="assets/js/main.js"></script>
+</body>
+</html>
