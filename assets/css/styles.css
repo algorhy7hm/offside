@@ -58,8 +58,8 @@ html {
 @media (max-width: 600px) {
     .title {
 	font-family: "Graduate";
-	font-size: 10px;
-	padding-left: 2px;
+	font-size: 8px;
+	left: 2px;
     }
 }
 
