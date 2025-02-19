@@ -1,0 +1,396 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Graduate&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+
+
+
+/*=============== VARIABLES ===============*/
+:root {
+  /*========== Colors ==========*/
+  --first-color: #F4F9F4;
+  --title-color: #F4F9F4;
+  --text-color: #74B49B;
+  --body-color: #F4F9F4;
+  --active-color:#74B49B;
+  --icons-color: #3E7B27;
+  --header-color: #000000;
+  --container-color: #ffffff;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --tiny-font-size: .625rem;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --tiny-font-size: .688rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.title {
+    display: inline-block;
+    user-select: none; 
+    -webkit-user-select: none; 
+    padding: 5px 10px; 
+	font-family: "Graduate";
+	font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+	left:10px;
+    z-index: 1;
+	color: #fff;
+}
+
+.header {
+  position: relative;
+  height: 80px;
+  background-color: var(--header-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 120px;
+  background-color: var(--body-color);
+  border-radius: 50%;
+  border: 2px solid var(--header-color);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.instagram-icon a {
+    color: #fff;
+	width:40px;
+	height:40px;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: transform 0.2s;
+	position: absolute;
+	top:25px;
+	right: 20px; /
+}
+
+.instagram-icon a:hover {
+    transform: scale(1.2);
+}
+
+
+
+.content {
+    padding-bottom: 0px;
+	padding-left:20px;
+	padding-right:0px;
+	padding-top:40px;
+	
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*=============== NAVBAR ===============*/
+.container {
+  max-width: 968px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.container section {
+  height: 200vh;
+  padding: 2rem 0;
+}
+
+.container h2 {
+  text-align: center;
+  color: var(--title-color);
+}
+
+.nav {
+  position: fixed;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  width: 328px;
+  height: 80px;
+  background-color: var(--container-color);
+  box-shadow: 0 8px 32px hsla(231, 44%, 45%, .2);
+  margin: 0 auto;
+  padding: 1.5rem .5rem;
+  border-radius: .65rem;
+  overflow: hidden;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  column-gap: 4rem;
+}
+
+.nav__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav__link i {
+  font-size: 1.5rem;
+  color: var(--icons-color);
+  z-index: 20;
+  transition: .3s;
+}
+
+.nav__name {
+  font-size: var(--tiny-font-size);
+  position: absolute;
+  font-weight: 500;
+  transition: .4s;
+  transform: translateY(50px);
+  z-index: 20;
+  color: var(--text-color);
+  opacity: 0;
+}
+
+/* Indicator link */
+.indicator {
+  position: absolute;
+  left: 8px;
+  bottom: 5px;
+  fill: var(--icons-color);
+  transition: .3s;
+}
+
+/* Active link */
+.active-link i {
+  color: var(--active-color);
+}
+
+.active-link .nav__name {
+  opacity: 1;
+  transform: translateY(28px);
+}
+
+/* Move ball */
+.nav__link:nth-child(1).active-link ~ .indicator {
+  transform: translateX(calc(60px));
+}
+
+.nav__link:nth-child(2).active-link ~ .indicator {
+  transform: translateX(calc(148px));
+}
+
+.nav__link:nth-child(3).active-link ~ .indicator {
+  transform: translateX(calc(236px));
+}
+
+
+<!--fixtures_html--!>
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+		
+		.Heading {
+			padding-top: 10px;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-size: 40px;
+			font-family: 'Sigmar';
+			color: black;
+			
+		}
+
+        /* Content to blur */
+        .content {
+            transition: filter 0.3s ease;
+            padding: 2rem;
+        }
+
+        .blurred {
+            filter: blur(5px);
+        }
+
+        /* Modal styling */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-box {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            position: relative;
+            text-align: center;
+            animation: popup 0.3s ease;
+        }
+
+        @keyframes popup {
+            0% { transform: scale(0.7); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+
+
+
+.open-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00000000;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 600px;
+    max-width: 100%;
+    position: relative;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s;
+}
+
+.team-graphic-button:hover {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 600px) {
+    .open-btn {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .nav {
+    zoom: .8;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 968px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nav {
+    zoom: 1.1;
+  }
+}
+
+
+
+
+
+
+/* stats.html */
+
+.club_name{
+  display: flex;
+  justify-content: left;
+  vertical-align:center;
+  column-gap: 2px;
+  padding-top: 5px;
+}
+
+.club_picture{
+	width: 30px;
+	height: 35px;
+	padding-bottom: 5px;
+}
+
+.league-table {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.league-table th,
+.league-table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.league-table thead {
+    background-color: #003c07;
+    color: #fff;
+}
+
+.league-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.league-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.league-table th {
+    position: sticky;
+    top: 0;
+}
+
+
