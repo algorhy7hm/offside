@@ -18,7 +18,7 @@
   --header-color: #000000;
   --container-color: #ffffff;
 
-  /*========== Font and typography ==========*/
+  /*========== Fonts ==========*/
   --body-font: 'Poppins', sans-serif;
   --tiny-font-size: .625rem;
 }
@@ -41,18 +41,25 @@ html {
 }
 
 .title {
-    display: inline-block;
-    user-select: none; 
-    -webkit-user-select: none; 
-    padding: 5px 10px; 
+	display: inline-block;
+	user-select: none; 
+	-webkit-user-select: none; 
+	padding: 5px 10px; 
 	font-family: "Graduate";
 	font-size: 36px;
-    font-weight: bold;
-    cursor: pointer;
-    position: absolute;
+	font-weight: bold;
+	cursor: pointer;
+	position: absolute;
 	left:10px;
-    z-index: 1;
+	z-index: 1;
 	color: #fff;
+}
+
+@media (max-width: 600px) {
+    .title {
+	font-family: "Graduate";
+	font-size: 16px;
+    }
 }
 
 .header {
