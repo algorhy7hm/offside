@@ -12,7 +12,7 @@
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
         
-        <title>Offside: Live Match stats</title>
+        <title>Offside</title>
   <style>
    
     .container { 
@@ -37,7 +37,7 @@
 	
 	
 <header class="header">
-    <img src="C:\Users\91997\Downloads\Offside\assets\img\logo.jpg" class="logo">
+    <img src="./assets/img/logo.jpg" class="logo">
     <div class="instagram-icon">
         <a href="https://www.instagram.com/offsidebpgc" target="_blank">
             <i class="fab fa-instagram"></i>
@@ -72,7 +72,7 @@
         <tbody>
             <tr>
                 <td>-</td>
-                <td><div class="club_name"> <img class="club_picture" src="C:\Users\91997\Downloads\Offside\assets\img\dysuni.png">  &nbsp Dyslexic United </div> </td>
+                <td><div class="club_name"> <img class="club_picture" src="./assets/img/dysuni.png">  &nbsp Dyslexic United </div> </td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -85,7 +85,7 @@
 			
             <tr>
                 <td>-</td>
-                <td><div class="club_name"> <img class="club_picture" src="C:\Users\91997\Downloads\Offside\assets\img\molc.png">  &nbsp Molceister FC </div> </td>
+                <td><div class="club_name"> <img class="club_picture" src="./assets/img/molc.png">  &nbsp Molceister FC </div> </td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -98,7 +98,7 @@
 
             <tr>
                 <td>-</td>
-                <td><div class="club_name"> <img class="club_picture" src="C:\Users\91997\Downloads\Offside\assets\img\etuni.png">  &nbsp Eternals United </div> </td>
+                <td><div class="club_name"> <img class="club_picture" src="./assets/img/etuni.png">  &nbsp Eternals United </div> </td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -111,7 +111,7 @@
 			
 			<tr>
                 <td>-</td>
-                <td><div class="club_name"> <img class="club_picture" src="C:\Users\91997\Downloads\Offside\assets\img\atmadrid.png">  &nbsp Unathletico Madrid </div> </td>
+                <td><div class="club_name"> <img class="club_picture" src="./assets/img/atmadrid.png">  &nbsp Unathletico Madrid </div> </td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -124,7 +124,7 @@
 			
 			<tr>
                 <td>-</td>
-                <td><div class="club_name"> <img class="club_picture" src="C:\Users\91997\Downloads\Offside\assets\img\prangers.png">  &nbsp Power Rangers FC </div> </td>
+                <td><div class="club_name"> <img class="club_picture" src="./assets/img/prangers.png">  &nbsp Power Rangers FC </div> </td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -137,7 +137,7 @@
 			
 			<tr>
                 <td>-</td>
-                <td><div class="club_name"> <img class="club_picture" src="C:\Users\91997\Downloads\Offside\assets\img\poojafc.png">  &nbsp Pooja FC </div> </td>
+                <td><div class="club_name"> <img class="club_picture" src="./assets/img/poojafc.png">  &nbsp Pooja FC </div> </td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -150,7 +150,7 @@
 			
 			<tr>
                 <td>-</td>
-                <td><div class="club_name"> <img class="club_picture" src="C:\Users\91997\Downloads\Offside\assets\img\kundanfc.png">  &nbsp Kundan FC </div> </td>
+                <td><div class="club_name"> <img class="club_picture" src="./assets/img/kundanfc.png">  &nbsp Kundan FC </div> </td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -163,7 +163,7 @@
 			
 			<tr>
                 <td>-</td>
-                <td><div class="club_name"> <img class="club_picture" src="C:\Users\91997\Downloads\Offside\assets\img\gongoafc.png">  &nbsp Gongoa FC </div> </td>
+                <td><div class="club_name"> <img class="club_picture" src="./assets/img/gongoafc.png">  &nbsp Gongoa FC </div> </td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -176,7 +176,7 @@
 			
 			<tr>
                 <td>-</td>
-                <td><div class="club_name"> <img class="club_picture" src="C:\Users\91997\Downloads\Offside\assets\img\godifc.png">  &nbsp Goal Diggers FC </div> </td>
+                <td><div class="club_name"> <img class="club_picture" src="./assets/img/godifc.png">  &nbsp Goal Diggers FC </div> </td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -189,7 +189,7 @@
 			
 			<tr>
                 <td>-</td>
-                <td><div class="club_name"> <img class="club_picture" src="C:\Users\91997\Downloads\Offside\assets\img\goonersfc.png">  &nbsp Gooners FC </div> </td>
+                <td><div class="club_name"> <img class="club_picture" src="./assets/img/goonersfc.png">  &nbsp Gooners FC </div> </td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -236,32 +236,32 @@
 
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
-		
-		 <script type="module">
+
+<!--supabase integration (template)-->
+		    
+<script type="module">
     import { createClient } from 'https://esm.sh/@supabase/supabase-js';
 
-    const supabase = createClient('YOUR_SUPABASE_URL', 'YOUR_SUPABASE_ANON_KEY');
+    const supabase = createClient('', '');
 
     async function fetchLiveStats() {
       const { data, error } = await supabase
         .from('match_stats')
         .select('*')
-        .eq('match_id', 1); // Adjust match_id as needed
+        .eq('match_id', 1); 
 
       if (error) {
         console.error('Error fetching stats:', error);
         return;
       }
 
-      // Update the DOM with fetched data
       data.forEach(stat => {
         document.getElementById(`${stat.team_name}-goals`).textContent = stat.goals;
         document.getElementById(`${stat.team_name}-assists`).textContent = stat.assists;
-        // Update more stats as needed
+
       });
     }
 
-    // Subscribe to real-time changes
     supabase
       .channel('public:match_stats')
       .on('postgres_changes', { event: '*', schema: 'public', table: 'match_stats' }, fetchLiveStats)
