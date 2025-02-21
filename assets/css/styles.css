@@ -421,32 +421,13 @@ width: 300px;
 }
 
 @media (max-width: 768px) {
-    .league-table, .league-table thead, .league-table tbody, .league-table tr, .league-table th, .league-table td {
-        display: block;
+    .table-container {
+        overflow-x: auto; /* Enables horizontal scrolling */
         width: 100%;
     }
 
-    .league-table thead {
-        display: none; /* Hide headers */
-    }
-
-    .league-table tr {
-        border: 1px solid #ddd;
-        margin-bottom: 10px;
-        padding: 10px;
-    }
-
-    .league-table td {
-        text-align: right;
-        padding: 10px;
-        position: relative;
-    }
-
-    .league-table td::before {
-        content: attr(data-label); /* Show column header */
-        position: absolute;
-        left: 10px;
-        font-weight: bold;
-        text-align: left;
+    .league-table {
+        width: 100%;
+        min-width: 600px; /* Ensures table doesn't shrink too much */
     }
 }
