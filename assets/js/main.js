@@ -9,7 +9,6 @@ navlink.forEach((item) => item.addEventListener('click', activeLink))
 
 
 
-
 function sortTable() {
   var table, rows, switching, i, x, y, shouldSwitch;
   table = document.getElementById("leagueTable");
@@ -31,7 +30,9 @@ function sortTable() {
     }
 
     if (shouldSwitch) {
+
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      rows[i].parentNode.insertBefore(rows[i + 1].nextElementSibling, rows[i + 1]);
       switching = true;
     }
   }
@@ -41,8 +42,6 @@ function sortTable() {
     teamRows[j].getElementsByTagName("TD")[0].textContent = j + 1; 
   }
 }
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".stats-row").forEach(row => {
