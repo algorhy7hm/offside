@@ -353,7 +353,7 @@ a {
 	position: relative;
 	cursor: pointer;
 	color: white;
-	width: 200px;
+	width: 500px;
 	height: auto;
 
 }
@@ -368,16 +368,9 @@ a {
 
 @media (max-width: 600px) {
 	.open-btn {
-
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background: #00000000;
-		border: none;
-		position: relative;
 		cursor: pointer;
 		color: white;
-		width: 300px;
+		width: 350px;
 		height: auto;
 
 	}
