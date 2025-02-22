@@ -268,7 +268,7 @@ a {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	font-size: 20px;
+	font-size: 12px;
 	font-family: 'Inconsolata';
 	color: black;
 }
@@ -353,7 +353,7 @@ a {
 	position: relative;
 	cursor: pointer;
 	color: white;
-	width: 150px;
+	width: 200px;
 	height: auto;
 
 }
