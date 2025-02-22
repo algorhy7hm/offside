@@ -61,7 +61,7 @@ html {
 @media (max-width: 600px) {
 	.title {
 		font-family: "Graduate";
-		font-size: 20px;
+		font-size: 25px;
 		left: 2px;
 	}
 }
@@ -239,13 +239,16 @@ a {
 	color: black;
 }
 
+@media (max-width:600px){
+	.Heading{
+		font-size:30px;
+	}
+}
 .set {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* Aligns items vertically in the center */
 	gap: 50px;
-	/* Adds space between the time and button */
 }
 
 
@@ -268,6 +271,12 @@ a {
 	font-size: 25px;
 	font-family: 'Inconsolata';
 	color: black;
+}
+
+@media (max-width:600px){
+	.time{
+		font-size:20px;
+	}
 }
 
 .content {
@@ -365,12 +374,10 @@ a {
 		align-items: center;
 		background: #00000000;
 		border: none;
-		padding: 20px;
-		margin: 20px auto;
 		position: relative;
 		cursor: pointer;
 		color: white;
-		width: 500px;
+		width: 300px;
 		height: auto;
 
 	}
