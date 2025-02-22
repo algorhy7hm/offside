@@ -252,11 +252,11 @@ a {
 .date {
 	font-weight: bold;
 	justify-content: center;
-	align-items: left;
-	text-align: left;
+	align-items: center;
+	text-align: center;
 	font-size: 30px;
 	font-family: 'Josefin Sans';
-	color: purple;
+	color: green;
 }
 
 .time {
@@ -265,7 +265,7 @@ a {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	font-size: 30px;
+	font-size: 25px;
 	font-family: 'Inconsolata';
 	color: black;
 }
