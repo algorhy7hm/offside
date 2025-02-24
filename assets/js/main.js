@@ -8,61 +8,74 @@ function activeLink(){
 navlink.forEach((item) => item.addEventListener('click', activeLink))
 
 
-
-
 function sortTable() {
-  var table, rows, switching, i, x, y, shouldSwitch;
-  table = document.getElementById("leagueTable");
-  switching = true;
+      var table, rows, switching, i, x, y, shouldSwitch;
+      table = document.getElementById("leagueTable");
+      switching = true;
 
-  while (switching) {
-    switching = false;
-    rows = table.getElementsByClassName("team-row");
+      while (switching) {
+        switching = false;
+        rows = table.getElementsByClassName("team-row");
 
-    for (i = 0; i < rows.length - 1; i++) {
-      shouldSwitch = false;
-      x = rows[i].getElementsByTagName("TD")[9];
-      y = rows[i + 1].getElementsByTagName("TD")[9];
+        for (i = 0; i < rows.length - 1; i++) {
+          shouldSwitch = false;
+          x = rows[i].getElementsByTagName("TD")[9]; 
+          y = rows[i + 1].getElementsByTagName("TD")[9]; 
 
-      if (Number(x.innerHTML) < Number(y.innerHTML)) {
-        shouldSwitch = true;
-        break;
+          if (Number(x.innerHTML) < Number(y.innerHTML)) {
+            shouldSwitch = true;
+            break;
+          } else if (Number(x.innerHTML) === Number(y.innerHTML)) {
+          
+            x = rows[i].getElementsByTagName("TD")[8]; 
+            y = rows[i + 1].getElementsByTagName("TD")[8]; 
+
+            if (Number(x.innerHTML) < Number(y.innerHTML)) {
+              shouldSwitch = true;
+              break;
+            } else if (Number(x.innerHTML) === Number(y.innerHTML)) {
+              x = rows[i].getElementsByTagName("TD")[6]; 
+              y = rows[i + 1].getElementsByTagName("TD")[6]; 
+
+              if (Number(x.innerHTML) < Number(y.innerHTML)) {
+                shouldSwitch = true;
+                break;
+              }
+            }
+          }
+        }
+
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          rows[i].parentNode.insertBefore(rows[i + 1].nextElementSibling, rows[i + 1]);
+          switching = true;
+        }
+      }
+
+      let teamRows = table.getElementsByClassName("team-row");
+      for (let j = 0; j < teamRows.length; j++) {
+        teamRows[j].getElementsByTagName("TD")[0].textContent = j + 1;
       }
     }
 
-    if (shouldSwitch) {
-      // Move the team-row and its corresponding stats-row
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      rows[i].parentNode.insertBefore(rows[i + 1].nextElementSibling, rows[i + 1]);
-      switching = true;
-    }
-  }
-
-  // Update the position numbers
-  let teamRows = table.getElementsByClassName("team-row");
-  for (let j = 0; j < teamRows.length; j++) {
-    teamRows[j].getElementsByTagName("TD")[0].textContent = j + 1; 
-  }
-}
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".stats-row").forEach(row => {
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".stats-row").forEach(row => {
         row.style.display = "none";
+      });
+      sortTable(); 
     });
-});
 
-function toggleStats(row) {
-    const nextRow = row.nextElementSibling;
-    const arrow = row.querySelector('.mobile-arrow');
+    function toggleStats(row) {
+      const nextRow = row.nextElementSibling;
+      const arrow = row.querySelector('.mobile-arrow');
 
-    if (nextRow && nextRow.classList.contains('stats-row')) {
+      if (nextRow && nextRow.classList.contains('stats-row')) {
         if (nextRow.style.display === 'table-row') {
-            nextRow.style.display = 'none';
-            arrow.textContent = '\u00a0 ˅'; 
+          nextRow.style.display = 'none';
+          arrow.textContent = '\u00a0 ˅';
         } else {
-            nextRow.style.display = 'table-row';
-            arrow.textContent = '\u00a0 ˄';
+          nextRow.style.display = 'table-row';
+          arrow.textContent = '\u00a0 ˄';
         }
+      }
     }
-}
