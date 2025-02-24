@@ -268,14 +268,14 @@ a {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	font-size: 12px;
+	font-size: 20px;
 	font-family: 'Inconsolata';
 	color: black;
 }
 
 @media (max-width:600px){
 	.time{
-		font-size:20px;
+	font-size:20px;
 	}
 }
 
